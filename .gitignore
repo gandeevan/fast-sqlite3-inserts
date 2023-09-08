@@ -158,13 +158,14 @@ dmypy.json
 **/*.rs.bk
 
 # Bazel build directories
-bazel-out/
-bazel-bin/
-bazel-testlogs/
-bazel-genfiles/
-
-# Bazel external dependencies
-external/
+**/bazel-out/
+**/bazel-bin/
+**/bazel-testlogs/
+**/bazel-genfiles/
+**/bazel-cpp/
 
 # Bazel cache (if using a local cache)
-.bazel_cache/
+**/.bazel_cache/
+
+**/sqlite/
+
