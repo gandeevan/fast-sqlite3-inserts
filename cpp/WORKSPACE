@@ -1,0 +1,7 @@
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+# http_archive(
+#     name = "spdlog",
+#     strip_prefix = "spdlog-1.12.0",  # Adjust this to the version you want
+#     urls = ["https://github.com/gabime/spdlog/archive/v1.12.0.tar.gz"],  # Adjust this to the version you want
+# )
