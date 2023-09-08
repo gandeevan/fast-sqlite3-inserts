@@ -80,7 +80,7 @@ int main() {
     RAISE_ON_DB_ERROR(sqlite3_exec(db, "COMMIT", NULL, NULL, NULL));
     LOG_DEBUG("Transaction committed successfully in {}ms", t.lap());
     LOG_INFO("Total time taken: {}ms", t.stop().second);
-    sqlite3_finalize(insertWithAreaStmt);
-    sqlite3_finalize(insertWithoutAreaStmt);
-    sqlite3_close(db);
+    RAISE_ON_DB_ERROR(sqlite3_finalize(insertWithAreaStmt));
+    RAISE_ON_DB_ERROR(sqlite3_finalize(insertWithoutAreaStmt));
+    RAISE_ON_DB_ERROR(sqlite3_close(db));
 }
